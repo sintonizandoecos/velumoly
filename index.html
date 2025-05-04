@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Velu Moly - Museo Virtual</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="aos/aos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body oncontextmenu="return false">
-  <div id="particles-js"></div>
+
   <header>
     <div class="logo">Velu Moly</div>
     <nav>
@@ -21,40 +20,40 @@
   </header>
 
   <section class="intro">
-    <h1 data-aos="fade-up">Museo Virtual de Velu Moly</h1>
-    <p data-aos="fade-up" data-aos-delay="100">Explorá un universo de imágenes, sonidos y sueños convertidos en arte visual.</p>
+    <h1>Museo Virtual de Velu Moly</h1>
+    <p>Explorá un universo de imágenes, sonidos y sueños convertidos en arte visual.</p>
   </section>
 
   <main class="gallery">
-    <div class="artwork" data-aos="fade-up">
+    <div class="artwork">
       <img src="img/Obra1.jpg" alt="Obra 1" onclick="openLightbox(this)">
       <div class="overlay">
         <h2>Alien Dreams</h2>
         <p>Un viaje entre columnas de luz y memoria. <a href="#">Escuchar Disco</a></p>
       </div>
     </div>
-    <div class="artwork" data-aos="fade-up" data-aos-delay="100">
+    <div class="artwork">
       <img src="img/Obra2.jpg" alt="Obra 2" onclick="openLightbox(this)">
       <div class="overlay">
         <h2>Sueño Nebular</h2>
         <p>Nebulosas internas que guían sueños perdidos. <a href="#">Escuchar Disco</a></p>
       </div>
     </div>
-    <div class="artwork" data-aos="fade-up" data-aos-delay="200">
+    <div class="artwork">
       <img src="img/Obra3.jpg" alt="Obra 3" onclick="openLightbox(this)">
       <div class="overlay">
         <h2>Luz Interna</h2>
         <p>Un reflejo solar desde adentro. <a href="#">Escuchar Disco</a></p>
       </div>
     </div>
-    <div class="artwork" data-aos="fade-up" data-aos-delay="300">
+    <div class="artwork">
       <img src="img/Obra4.jpg" alt="Obra 4" onclick="openLightbox(this)">
       <div class="overlay">
         <h2>Bosque Azul</h2>
         <p>Donde los árboles escuchan. <a href="#">Escuchar Disco</a></p>
       </div>
     </div>
-    <div class="artwork" data-aos="fade-up" data-aos-delay="400">
+    <div class="artwork">
       <img src="img/Obra5.jpg" alt="Obra 5" onclick="openLightbox(this)">
       <div class="overlay">
         <h2>Fantasía Solar</h2>
@@ -66,18 +65,9 @@
   <!-- Lightbox -->
   <div id="lightbox" onclick="closeLightbox()">
     <span class="close-btn">×</span>
-    <img id="lightbox-img" src="" alt="Imagen Ampliada">
+    <img id="lightbox-img" src="" alt="Imagen Ampliada" />
   </div>
 
-  <script src="aos/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
   <script src="script.js"></script>
-
-  <script src="particles.min.js"></script>
-  <script>
-    particlesJS.load('particles-js', 'particles.json');
-  </script>
 </body>
 </html>
