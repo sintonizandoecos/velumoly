@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body oncontextmenu="return false">
-
   <header>
     <div class="logo">Velu Moly</div>
     <nav>
@@ -19,53 +18,26 @@
     </nav>
   </header>
 
-  <section class="intro">
-    <h1>Museo Virtual de Velu Moly</h1>
-    <p>Explorá un universo de imágenes, sonidos y sueños convertidos en arte visual.</p>
+  <section class="carousel-container">
+    <button class="arrow left" onclick="prevSlide()">‹</button>
+    <div class="carousel">
+      <img src="img/Obra1.jpg" alt="Obra 1" onclick="openLightbox(0)" />
+      <img src="img/Obra2.jpg" alt="Obra 2" onclick="openLightbox(1)" />
+      <img src="img/Obra3.jpg" alt="Obra 3" onclick="openLightbox(2)" />
+      <img src="img/Obra4.jpg" alt="Obra 4" onclick="openLightbox(3)" />
+      <img src="img/Obra5.jpg" alt="Obra 5" onclick="openLightbox(4)" />
+      <img src="img/Obra6.jpg" alt="Obra 6" onclick="openLightbox(5)" />
+    </div>
+    <button class="arrow right" onclick="nextSlide()">›</button>
   </section>
-
-  <main class="gallery">
-    <div class="artwork">
-      <img src="img/Obra1.jpg" alt="Obra 1" onclick="openLightbox(this)">
-      <div class="overlay">
-        <h2>Alien Dreams</h2>
-        <p>Un viaje entre columnas de luz y memoria. <a href="#">Escuchar Disco</a></p>
-      </div>
-    </div>
-    <div class="artwork">
-      <img src="img/Obra2.jpg" alt="Obra 2" onclick="openLightbox(this)">
-      <div class="overlay">
-        <h2>Sueño Nebular</h2>
-        <p>Nebulosas internas que guían sueños perdidos. <a href="#">Escuchar Disco</a></p>
-      </div>
-    </div>
-    <div class="artwork">
-      <img src="img/Obra3.jpg" alt="Obra 3" onclick="openLightbox(this)">
-      <div class="overlay">
-        <h2>Luz Interna</h2>
-        <p>Un reflejo solar desde adentro. <a href="#">Escuchar Disco</a></p>
-      </div>
-    </div>
-    <div class="artwork">
-      <img src="img/Obra4.jpg" alt="Obra 4" onclick="openLightbox(this)">
-      <div class="overlay">
-        <h2>Bosque Azul</h2>
-        <p>Donde los árboles escuchan. <a href="#">Escuchar Disco</a></p>
-      </div>
-    </div>
-    <div class="artwork">
-      <img src="img/Obra5.jpg" alt="Obra 5" onclick="openLightbox(this)">
-      <div class="overlay">
-        <h2>Fantasía Solar</h2>
-        <p>Luz cálida en mundos inexistentes. <a href="#">Escuchar Disco</a></p>
-      </div>
-    </div>
-  </main>
 
   <!-- Lightbox -->
   <div id="lightbox" onclick="closeLightbox()">
     <span class="close-btn">×</span>
-    <img id="lightbox-img" src="" alt="Imagen Ampliada" />
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Imagen Ampliada" />
+      <div id="lightbox-text"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
