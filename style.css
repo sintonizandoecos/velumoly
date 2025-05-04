@@ -1,0 +1,115 @@
+
+body {
+  margin: 0;
+  font-family: 'Caudex', serif;
+  background: url('img/acuarela.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.artwork {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.artwork img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+.artwork:hover img {
+  transform: scale(1.05);
+}
+.artwork img[onclick] {
+  pointer-events: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,0.85);
+  width: 100%;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.artwork:hover .overlay {
+  transform: translateY(0);
+}
+.overlay h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+.overlay p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+.overlay a {
+  color: #3b82f6;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 8px solid white;
+  box-shadow: 0 0 20px black;
+}
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
